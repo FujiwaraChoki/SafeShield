@@ -1,0 +1,6 @@
+input, button {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 25px;
+}
