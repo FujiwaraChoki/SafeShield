@@ -22,6 +22,21 @@ const getRandomFaces = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  let isShowingQrCode = false;
+  const showQrCodeButton = document.querySelector("#showQrCodeButton");
+  showQrCodeButton.addEventListener("click", (e) => {
+    const qrCode = document.querySelector("#qrCode");
+    if(isShowingQrCode) {
+      showQrCodeButton.innerHTML = "Show";
+      qrCode.classList.add("hidden");
+      isShowingQrCode = false;
+    } else {
+      showQrCodeButton.innerHTML = "Hide";
+      qrCode.classList.remove("hidden");
+      isShowingQrCode = true;
+    }
+    
+  });
   const sendMailButton = document.querySelector("#send-mail-button");
   sendMailButton.addEventListener("click", (e) => {
     e.preventDefault();

@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="common.css">
     <script defer src="script.js"></script>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    <!--Bootstrap 4-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -52,16 +51,42 @@
         </div>
     </nav>
     <main>
-        <form enctype="multipart/form-data">
-            <div class="container">
-                <h1 class="title">Upload QR-Code</h1>
-                <p>Please upload the QR-Code on your Vaccination Certificate.</p>
-                <hr>
-                <input type="file" placeholder="Upload Image" name="file" required>
-                <hr>
-                <button type="submit" class="button">Upload</button>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Upload a new QR-Code</h5>
+                            <p class="card-text">Upload a new QR-Code to replace your current one.</p>
+                            <a href="/upload.html" class="btn btn-primary">Upload</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title
+                            ">Show your current QR-Code</h5>
+                            <p class="card-text">Show the current QR-Code which is associated with your account.</p>
+                            <button class="btn btn-primary" id="showQrCodeButton">Show</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </form>
+        </div>
+        <div id="qrCode" class="container hidden">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Your current QR-Code</h5>
+                            <p class="card-text">Your current QR-Code is shown below.</p>
+                            <img src="images/qr-code.png" alt="QR-Code" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!--Bootstrap 4 JS-->
